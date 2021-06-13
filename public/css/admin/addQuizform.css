@@ -1,0 +1,365 @@
+input,
+textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 2 */
+    margin: 0;
+    /* 3 */
+    box-sizing: border-box;
+}
+
+label {
+    box-sizing: border-box;
+}
+
+textarea {
+    overflow: auto;
+    /* 1 */
+    vertical-align: top;
+    /* 2 */
+}
+.option-container{
+    position: relative;
+}
+
+input[type="email"],
+input[type="text"] {
+    width: 100%;
+    background-color: white;
+    height: calc(3em + 2px);
+    padding: 1em;
+    font-size: 1em;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    box-shadow: none;
+    resize: none;
+    outline: none;
+}
+
+input[type="email"]:hover,
+input[type="text"]:hover {
+    border: 1px solid #cccccc;
+}
+
+input[type="email"]:focus,
+input[type="email"]:active,
+input[type="text"]:focus,
+input[type="text"]:active {
+    border: 1px solid #e87e22;
+}
+
+input[type="email"]:focus+label:before,
+input[type="email"]:active+label:before,
+input[type="text"]:focus+label:before,
+input[type="text"]:active+label:before {
+    color: #e87e22;
+}
+
+input[type="email"]+label,
+input[type="text"]+label {
+    display: block;
+    font-size: 1em;
+    height: 3em;
+    line-height: 3em;
+    margin-top: calc(-3em - 1px);
+    /* margin-bottom: 1em; */
+    pointer-events: none;
+}
+
+input[type="email"]+label:before,
+input[type="text"]+label:before {
+    content: attr(placeholder);
+    display: inline-block;
+    color: #999999;
+    margin: 0 calc(1em + 2px);
+    white-space: nowrap;
+    -webkit-transition-property: -webkit-transform, color;
+    -webkit-transition-property: color, -webkit-transform;
+    transition-property: color, -webkit-transform;
+    transition-property: transform, color;
+    transition-property: transform, color, -webkit-transform;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+}
+
+input[type="email"]:focus+label:before,
+input[type="email"].active+label:before,
+input[type="email"]:valid+label:before,
+input[type="text"]:focus+label:before,
+input[type="text"].active+label:before,
+input[type="text"]:valid+label:before {
+    background: white;
+    line-height: 1;
+    padding: 0 1.5px;
+    -webkit-transform: translateY(calc(-3em / 2 - 1px/ 2)) scale(0.8, 0.8);
+    transform: translateY(calc(-3em / 2 - 1px/ 2)) scale(0.8, 0.8);
+}
+
+input[type="email"]:valid,
+input[type="text"]:valid {
+    border: 1px solid #23a045;
+}
+
+input[type="email"]:valid+label:before,
+input[type="text"]:valid+label:before {
+    content: attr(placeholder);
+    color: #23a045;
+}
+
+.editor {
+    border: 1px solid #cccccc !important;
+    border-radius: 5px !important;
+}
+
+.editor-container {
+    position: relative;
+}
+
+.editor-label {
+    font-size: .8rem !important;
+    position: absolute;
+    top: -10px;
+    background-color: white;
+    left: 15px;
+}
+
+.option-editor {
+    border: 1px solid #cccccc !important;
+    border-radius: 5px !important;
+    min-height: 40px !important;
+}
+
+textarea {
+    width: 100%;
+    background-color: white;
+    height: calc(7em + 2px);
+    padding: 1em;
+    font-size: 1em;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    box-shadow: none;
+    resize: none;
+    outline: none;
+}
+
+textarea:hover {
+    border: 1px solid #cccccc;
+}
+
+textarea:focus,
+textarea:active {
+    border: 1px solid #151546;
+}
+
+textarea:focus+label:before,
+textarea:active+label:before {
+    color: #151546;
+}
+
+textarea+label {
+    display: block;
+    font-size: 1em;
+    height: calc(7em + 2px);
+    line-height: 1;
+    padding-top: calc(1em + 1px);
+    margin-top: calc(-7em - 2px);
+    margin-bottom: 1em;
+    pointer-events: none;
+}
+
+textarea+label:before {
+    content: attr(placeholder);
+    display: inline-block;
+    color: #999999;
+    margin: 0 calc(1em + 2px);
+    white-space: nowrap;
+    -webkit-transition-property: -webkit-transform, color;
+    -webkit-transition-property: color, -webkit-transform;
+    transition-property: color, -webkit-transform;
+    transition-property: transform, color;
+    transition-property: transform, color, -webkit-transform;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+}
+
+textarea:focus+label:before,
+textarea.active+label:before,
+textarea:valid+label:before {
+    background: white;
+    line-height: 1;
+    padding: 0 1.5px;
+    -webkit-transform: translateY(calc((-1em - 0.5em) - 0.5px)) scale(0.8, 0.8);
+    transform: translateY(calc((-3em - 0.7em) - 0.5px)) scale(0.8, 0.8);
+}
+
+textarea:valid {
+    border: 1px solid #23a045;
+}
+
+textarea:valid+label:before {
+    content: attr(placeholder);
+    color: #23a045;
+}
+
+
+
+/* design for select box */
+
+.field-wrapper {
+    /* position: fixed; */
+    /* margin-bottom: 20px; */
+    font-family: inherit;
+    font-size: 100%;
+}
+
+.field-wrapper select:focus {
+    border: 1px solid #151546;
+    ;
+    border-radius: 5px !important;
+}
+
+.field-wrapper:after {
+    content: "▼";
+    font: 17px "Consolas", monospace;
+    color: #555;
+    right: 9px;
+    float: right;
+    /*Adjust for position however you want*/
+
+    top: -2em;
+    padding: 0 0 1px;
+    -ms-transform: scale(1, 0.6);
+    /* IE 9 */
+    -webkit-transform: scale(1, 0.6);
+    /* Safari */
+    transform: scale(1, 0.6);
+    /*left line */
+
+    position: relative;
+    pointer-events: none;
+}
+
+.field-wrapper select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Add some styling */
+
+    display: block;
+    width: 100%;
+    /* max-width: 350px; */
+    height: calc(3em + 2px);
+    float: left;
+    margin: 0px 0px 0rem 0px;
+    padding: 0px 24px 0px 14px;
+    outline: none;
+    /*outline-width: 2px;
+  outline-radius: 4px;
+  outline-color:#00bafa; */
+    font-size: 1em;
+    line-height: 1.75;
+    color: #525151;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 5px !important;
+    -ms-word-break: normal;
+    word-break: normal;
+
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    white-space: nowrap;
+    -webkit-transition-property: -webkit-transform, color;
+    -webkit-transition-property: color, -webkit-transform;
+    transition-property: color, -webkit-transform;
+    transition-property: transform, color;
+    transition-property: transform, color, -webkit-transform;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+}
+
+.field-wrapper select:valid {
+    border: 1px solid #23a045;
+
+}
+
+.field-wrapper label {
+    position: relative;
+    top: 1em;
+    left: 10px;
+    font-size: 0.8em;
+    color: #23a045;
+    opacity: 0;
+    background-image: linear-gradient(to bottom, #fff, #fff);
+    background-size: 100% 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-weight: normal;
+    padding: 0px 3px 0px 3px;
+    margin: 0px 0px 0px 2px;
+
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    white-space: nowrap;
+    -webkit-transition-property: -webkit-transform, color;
+    -webkit-transition-property: color, -webkit-transform;
+    transition-property: color, -webkit-transform;
+    transition-property: transform, color;
+    transition-property: transform, color, -webkit-transform;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+}
+
+.field-wrapper label.on {
+    color: #e87e22;
+}
+
+.field-wrapper label.show {
+    position: relative;
+    /* top: 0.8em; */
+    z-index: 10;
+    opacity: 1;
+    color: #23a045;
+}
+
+option {
+    color: #3d3d3d;
+    background-color: whitesmoke;
+}
+
+.watermark {
+    border: 1px solid #23a045;
+}
+
+.option-pad {
+    padding: 20px 0px;
+}

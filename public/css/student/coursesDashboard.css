@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.courses {
+    background: #fff;
+    width: 100%;
+}
+
+.sidebar-topic {
+    display: flex;
+    width: 100%;
+    /* height: 80vh; */
+    justify-content: flex-start;
+    /* align-items: space-between; */
+    border-right: 0.3rem solid #f2f2f2;
+}
+
+#sidebar-courses {
+    padding-top: 3rem;
+    padding-left: 1rem;
+    width: 100%;
+}
+
+#sidebar-courses .list-items {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    width: 100%;
+    height: 30%;
+    list-style: none;
+}
+
+#sidebar-courses .list-items li,
+#sidebar-courses .list-items li a {
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
+    color: #2e2f48;
+    /* width: 100%;
+    height: 100%; */
+    cursor: pointer;
+    padding: 0.3rem 1rem 0.3rem 0.3rem;
+}
+
+.active-list-class,
+.active-list-class a {
+    color: #fff !important;
+    background-color: #575fcf;
+    border-radius: 8px;
+}
+
+/* #sidebar-courses .list-items li:hover {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0px 5px 3px #575fcf;
+} */
+
+/* lessons section */
+
+.lessons {
+    padding: 1rem;
+}
+
+.card-wrapper-courses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.card-courses {
+    width: 14.5rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.3rem;
+    margin-bottom: 2rem;
+    border: 1px solid #d2dae2;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-img-1 {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.card-content-1 {
+    width: 100%;
+}
+
+.all-courses {
+    padding: 2rem;
+}
+
+.lesson-title {
+    font-size: 13px;
+    padding: 0.2rem 0.8rem;
+}
+
+.teacher-name {
+    font-size: 12px;
+    padding: 0.2rem 0.8rem;
+    margin-bottom: 0.5rem !important ;
+}
+
+/* Responsive */
+
+@media (max-width: 767.5px) {
+    .sidebar-topic {
+        border-right: none;
+        border-bottom: 0.3rem solid #f2f2f2;
+        height: 15vh;
+    }
+
+    #sidebar-courses {
+        max-width: 125rem;
+        padding: 0;
+        overflow-x: auto;
+    }
+
+    #sidebar-courses .list-items {
+        height: 100%;
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    #sidebar-courses .list-items li,
+    #sidebar-courses .list-items li a {
+        /* min-width: 10rem; */
+        white-space: nowrap;
+        padding: 0.3rem 1rem 0.3rem 1rem;
+    }
+}
+
+::-webkit-scrollbar {
+    height: 4px;
+    /* width: 100%; */
+    /* background: gray; */
+}
+
+@media (max-width: 600px) {
+    .card-courses {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .card-img-1 {
+        height: 7.5rem;
+    }
+}
